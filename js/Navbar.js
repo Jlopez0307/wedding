@@ -2,6 +2,7 @@ const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 const bars = document.querySelectorAll("#menu-btn div");
 const menuLinks = document.querySelectorAll("#menu a");
+const navbar = document.getElementById("navbar");
 
 menuBtn.addEventListener("click", () => {
     // Toggle menu visibility
@@ -33,4 +34,15 @@ menuBtn.addEventListener("click", () => {
 
     bars[0].classList.toggle("translate-y-1.5");
     bars[2].classList.toggle("-translate-y-1.5");
-  });
+});
+
+// Change navbar background on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("bg-white", "shadow-lg");
+    navbar.classList.remove("bg-transparent");
+  } else {
+    navbar.classList.add("bg-transparent");
+    navbar.classList.remove("bg-white", "shadow-lg");
+  }
+});
