@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Wedding</title>
   <link rel="stylesheet" href="../css/output.css">
-  <link rel="stylesheet" href="../css/hero.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 
   <!-- Google Fonts -->
@@ -19,11 +19,11 @@
   <!-- 🌐 Navbar -->
   <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
+      <div class="flex justify-end items-center py-4">
         
 
         <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-6">
+        <div class="hidden md:flex  space-x-6">
           <a href="#about" class="hover:text-blue-500">Our Story</a>
           <a href="#rsvp" class="hover:text-blue-500">RSVP</a>
           <a href="#details" class="hover:text-blue-500">FAQ</a>
@@ -50,15 +50,14 @@
 
   <!-- 🌟 Hero Section -->
   <section id="hero-jumbotron" class="flex flex-col items-center justify-center text-white text-center">
-    <div class="mt-20 mb-10 w-screen">
-      <h1 class="text-2xl text-black fade-in-up">Lauren & Matheus</h1>
+    <div class="h-screen md:h-80 w-screen opacity-80 bg-[url(../imgs/RingBanner2.jpg)] bg-cover bg-no-repeat bg-center flex justify-center items-center">
+      <h1 class="text-8xl text-white fade-in-up alex-brush-regular">Lauren & Matheus</h1>
     </div>
-    <div class="h-96 w-screen bg-[url(../imgs/RingBanner2.jpg)] bg-cover bg-no-repeat bg-center fade-in-up"></div>
-    <div class=" bg-opacity-50 p-8 rounded-lg">
-      <h2 class="text-5xl font-bold fade-in-up font-fancy text-black">We Hope To See You Soon</h2>
-      <p class="text-xl mt-4 fade-in-up text-black">October 11th, 3pm, 259 Concord St, Framingham, MA 01702</p>
-      <div id="hero-text" class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 fade-in-up">
-        
+    <div class="h-screen flex flex-col justify-center items-center bg-opacity-50 p-8 rounded-lg">
+      <h2 class="text-5xl font-bold text-black">We Hope To See You Soon</h2>
+      <p class="text-xl mt-4 text-black">October 11th, 3pm, 259 Concord St, Framingham, MA 01702</p>
+      <div id="hero-text" class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+        <button class="text-black">RSVP</button>
       </div>
     </div>
   </section>

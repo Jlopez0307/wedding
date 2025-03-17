@@ -12,3 +12,10 @@
   .fade-in-up {
     animation: fadeInUp 2s ease-in-out;
   }
+
+/* Google Fonts */
+.alex-brush-regular {
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
