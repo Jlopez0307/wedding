@@ -1,6 +1,6 @@
 {
     "headers": {
-        "/css/output.css": {
+        "./css/output.css": {
             "Content-Type": ["text/css; charset=utf-8"]
         }
     }
