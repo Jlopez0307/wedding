@@ -254,6 +254,12 @@
   .table {
     display: table;
   }
+  .aspect-3\/2 {
+    aspect-ratio: 3/2;
+  }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .h-0 {
     height: calc(var(--spacing) * 0);
   }
@@ -271,6 +277,21 @@
   }
   .h-82 {
     height: calc(var(--spacing) * 82);
+  }
+  .h-\[40rem\] {
+    height: 40rem;
+  }
+  .h-\[50\%\] {
+    height: 50%;
+  }
+  .h-\[50px\] {
+    height: 50px;
+  }
+  .h-\[50rem\] {
+    height: 50rem;
+  }
+  .h-\[75\%\] {
+    height: 75%;
   }
   .h-\[100\%\] {
     height: 100%;
@@ -292,6 +313,9 @@
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
+  }
+  .w-\[80\%\] {
+    width: 80%;
   }
   .w-auto {
     width: auto;
@@ -438,6 +462,9 @@
   }
   .bg-\[url\(\.\.\/imgs\/RingBanner2\.jpg\)\] {
     background-image: url(../imgs/RingBanner2.jpg);
+  }
+  .bg-\[url\(\.\.\/imgs\/RingBannerMobile\.jpg\)\] {
+    background-image: url(../imgs/RingBannerMobile.jpg);
   }
   .bg-cover {
     background-size: cover;
