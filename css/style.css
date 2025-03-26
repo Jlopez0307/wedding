@@ -9,9 +9,17 @@
     }
   }
   
-  .fade-in-up {
+.fade-in-up {
     animation: fadeInUp 2s ease-in-out;
-  }
+}
+
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* Google Fonts */
 .alex-brush-regular {
