@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Wedding</title>
+  <link rel="stylesheet" href="../css/output.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+     
+  <!-- 🌐 Navbar -->
+  <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-end items-center py-4">
+        
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+            <a href="./index.html" class="hover:text-blue-500">Home</a>
+            <a href="./rsvpForm.html" class="hover:text-blue-500">RSVP</a>
+            <a href="./faq.html" class="hover:text-blue-500">FAQ</a>
+            <a href="#contact" class="hover:text-blue-500">Registry</a>
+            <a href="./gallery.html" class="hover:text-blue-500">Gallery</a>
+          </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden flex flex-col space-y-1  focus:outline-none">
+          <div class="w-6 h-0.5 bg-gray-800 transition-all duration-300" id="bar1"></div>
+          <div class="w-6 h-0.5 bg-gray-800 transition-all duration-300" id="bar2"></div>
+          <div class="w-6 h-0.5 bg-gray-800 transition-all duration-300" id="bar3"></div>
+        </button>
+
+      </div>
+    </div>
+
+    <div id="menu" class="hidden md:hidden bg-white py-4 space-y-2 text-center opacity-0 scale-95 transition-all duration-300">
+        <a href="./index.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Home</a>
+        <a href="./rsvpForm.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">RSVP</a>
+        <a href="./faq.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">FAQ</a>
+        <a href="./gallery.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Gallery</a>
+      </div>
+  </nav>
+
+  <!-- RSVP Form -->
+  <section class="w-[40%] mx-auto p-6 rounded-2xl bg-white shadow-2xl mt-52">
+    <h2 class="text-2xl font-semibold mb-4 text-center text-black">RSVP</h2>
+
+    <div id="success-message" class="hidden text-center p-4 bg-green-100 rounded-md mb-4 text-green-700">
+      🎉 Thank you for your RSVP! We can't wait to celebrate with you.
+    </div>
+
+
+    <form id="rsvp-form" class="space-y-4 text-left text-black">
+        <!-- First Name -->
+        <div>
+            <label class="block text-sm font-medium mb-1" for="first-name">First Name</label>
+            <input type="text" id="first-name" name="firstName" required
+                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Last Name -->
+        <div>
+            <label class="block text-sm font-medium mb-1" for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="lastName" required
+                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium mb-1" for="email">Email</label>
+          <input type="email" id="email" name="email" required
+              class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+        <!-- Allergies -->
+        <div>
+            <label class="block text-sm font-medium mb-1" for="allergies">Allergies</label>
+            <input type="text" id="allergies" name="allergies" placeholder="Optional"
+                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Plus One -->
+        <div class="flex items-center space-x-2">
+            <input type="checkbox" id="plus-one" name="plusOne"
+                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+            <label for="plus-one" class="text-sm text-black">Bringing a plus one?</label>
+        </div>
+
+        <!-- Plus One Name Input (hidden by default) -->
+      <div id="plus-one-name-field" class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
+        <label class="block text-sm font-medium mb-1 mt-2" for="plus-one-name">Plus One's Name</label>
+        <input type="text" id="plus-one-name" name="plusOneName"
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Error message -->
+      <div id="error-message" class="hidden text-center p-4 bg-red-100 rounded-md mb-4 text-red-700">
+        Sorry, something went wrong. Please try again.
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit"
+            class="w-full bg-black hover:bg-gray-600 text-white font-semibold py-2 rounded-md transition duration-300">Submit
+        </button>
+    </form>
+</section>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="../js/rsvpForm.js"></script>
+  <script src="../js/Navbar.js"></script>
+
+</body>
+</html>
