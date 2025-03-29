@@ -1,6 +1,7 @@
 const plusOneCheckbox = document.getElementById('plus-one');
 const plusOneField = document.getElementById('plus-one-name-field');
 const plusOneTextField = document.querySelector('#plus-one-name');
+const submitButton = document.querySelector('#submit-button');
 
 
 
@@ -29,6 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        //Disable submit button and change text
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+        submitButton.classList.add('opacity-50', "cursor-not-allowed", "animate-pulse");
+
+
 
         const selectedFoodChoice = document.querySelector('input[name="foodChoice"]:checked').value;
 
@@ -76,6 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                 //Display error message from Google Apps Script
                 errorMessage.innerText = "This email has already been used. Please use a different email.";
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
+                submitButton.classList.remove('opacity-50', "cursor-not-allowed", "animate-pulse");
             }
         } catch (error) {
             console.log(error);
