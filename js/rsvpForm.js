@@ -1,5 +1,6 @@
 const plusOneCheckbox = document.getElementById('plus-one');
 const plusOneField = document.getElementById('plus-one-name-field');
+const plusOneTextField = document.querySelector('#plus-one-name');
 
 
 
@@ -21,11 +22,15 @@ plusOneCheckbox.addEventListener('change', () => {
 
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('rsvp-form');
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        const selectedFoodChoice = document.querySelector('input[name="foodChoice"]:checked').value;
 
         const formData = {
             firstName: document.getElementById('first-name').value,
@@ -33,12 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
             email: document.getElementById('email').value,
             allergies: document.getElementById('allergies').value,
             plusOne: document.getElementById('plus-one').checked ? "Yes" : "No",
-            plusOneName: document.getElementById('plus-one-name').value
+            plusOneName: document.getElementById('plus-one-name').value,
+            foodChoice: selectedFoodChoice
         };
 
         console.log(formData);
         try {
-            const result = await fetch('https://script.google.com/macros/s/AKfycbxXuKHY72IIfE0OvSfl5ZkI0eqCDAcR4fbWVsbUvX2rOrWPKjt7oI3woHBJjIf3lkiSRA/exec', {
+            const result = await fetch('https://script.google.com/macros/s/AKfycby2-4laTYQ0x8V98dd86tNAedpCEENQmMHMDgr9Eg35CF_aUzD6Mu83F6mHoJeKJNOIDg/exec', {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {

@@ -93,18 +93,40 @@
                 class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
+        <!-- Food Choice -->
+        <fieldset class="mt-2">
+            <legend class="text-sm font-medium text-black">Food Choice:</legend>
+            <div class="flex space-x-4 mt-1">
+                <label class="flex items-center space-x-1">
+                    <input type="radio" name="foodChoice" value="Pizza" required class="text-blue-600 focus:ring-blue-500">
+                    <span class="text-sm text-black">Pizza</span>
+                </label>
+                <label class="flex items-center space-x-1">
+                    <input type="radio" name="foodChoice" value="Stroganoff" required class="text-blue-600 focus:ring-blue-500">
+                    <span class="text-sm text-black">Stroganoff</span>
+                </label>
+            </div>
+        </fieldset>
+
         <!-- Plus One -->
         <div class="flex items-center space-x-2">
             <input type="checkbox" id="plus-one" name="plusOne"
                 class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-            <label for="plus-one" class="text-sm text-black">Bringing a plus one?</label>
+            <label for="plus-one" class="text-sm text-black">Bringing Guests?</label>
+
         </div>
+
+        
 
         <!-- Plus One Name Input (hidden by default) -->
       <div id="plus-one-name-field" class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
-        <label class="block text-sm font-medium mb-1 mt-2" for="plus-one-name">Plus One's Name</label>
-        <input type="text" id="plus-one-name" name="plusOneName"
-            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <label class="block text-sm font-medium mb-1 mt-2" for="plus-one-name">Guest/s</label>
+        <textarea
+            type="text" 
+            id="plus-one-name" 
+            name="plusOneName" 
+            placeholder="Ex: John Doe, Jane Doe"
+            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Error message -->
