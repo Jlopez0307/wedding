@@ -38,17 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log(formData);
         try {
-            const response = await fetch('https://script.google.com/macros/s/AKfycbxdmeMUgHnwGBOW4isRm9tZCkLCxZtW-urlX6r0dNq5xSfah3tnQhuHrCPsI7uBMkHBjQ/exec', {
+            const result = await fetch('https://script.google.com/macros/s/AKfycbxXuKHY72IIfE0OvSfl5ZkI0eqCDAcR4fbWVsbUvX2rOrWPKjt7oI3woHBJjIf3lkiSRA/exec', {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {
-                    'Content-Type': 'text/plain'
-                }
+                    'Content-Type': 'text/plain;charset=utf-8' // Change from 'text/plain' to 'application/json'
+                },
+                
             });
 
-            const result = await response.json(); 
+            const textResponse = await result.text();
 
-            if (result.status === "success") {
+            if (textResponse === "Success") {
                 
                 // Optional: Fade out the form
                 rsvpForm.classList.add('opacity-0');
@@ -68,10 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 500); // Matches the transition duration
                     
                 //Display error message from Google Apps Script
-                errorMessage.innerText = result.data;
+                errorMessage.innerText = "This email has already been used. Please use a different email.";
             }
         } catch (error) {
-            alert("Something went wrong. Please try again later.");
+            console.log(error);
         }
     });
 });
