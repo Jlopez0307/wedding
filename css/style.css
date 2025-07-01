@@ -27,3 +27,8 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.parallax {
+  background-attachment: fixed;
+  will-change: background-position;
+}
