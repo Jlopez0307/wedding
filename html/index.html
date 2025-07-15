@@ -16,6 +16,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Poiret+One&display=swap" rel="stylesheet">
+
 
 
 </head>
@@ -57,134 +61,109 @@
     </div>
   </nav>
 
+  <!-- DONT FORGET ATTRIBUTION!!!
+  <a href="https://www.vecteezy.com/free-png/raspberry">Raspberry PNGs by Vecteezy</a> 
+  -->
+
   <!-- 🌟 Hero Section -->
-  <section id="hero-jumbotron" class="flex flex-col items-center justify-center text-white text-center">
-    <div class="mt-16 h-[30rem] md:h-screen lg:h-screen w-screen lg:w-[50%] bg-[url(../imgs/RingBanner2.jpg)] bg-cover bg-center flex justify-center items-center xl:justify-center xl:items-center">
-      <div class="mt-80 md:mt-120 lg:mt-120">
-        <h1 class="text-5xl text-white fade-in-up alex-brush-regular">Lauren & Matheus</h1>
-        <h2 class="text-3xl text-white fade-in-up alex-brush-regular ">We're Getting Married!</h2>
-      </div>
-    </div>
-
-
-    <div class="h-52 flex flex-col justify-center items-center bg-opacity-50 rounded-lg mt-10">
-
-
-      <h2 class="text-4xl font-bold text-black alex-brush-regular">We Hope To See You Soon!</h2>
-      <p class="text-xl mt-4 text-black montserrat-regular">October 11th, 3pm, 259 Concord St, Framingham, MA 01702</p>
-
-      <p class="text-xl mt-4 text-black montserrat-regular">Let us know you'll be there!</p>
-
-      
-    </div>
-
-    <!-- RSVP Form -->
-    <section class="w-[80%] md:w-[50%] lg:w-[50%] mx-auto p-6 rounded-2xl bg-white shadow-2xl mt-8">
-      <h2 class="text-2xl font-semibold mb-4 text-center text-black">RSVP</h2>
-
-      <div id="success-message" class="hidden text-center p-4 bg-green-100 rounded-md mb-4 text-green-700">
-        🎉 Thank you for your RSVP! We can't wait to celebrate with you.
-      </div>
-  
-      <form id="rsvp-form" class="space-y-4 text-left text-black">
-          <!-- First Name -->
-          <div>
-              <label class="block text-sm font-medium mb-1" for="first-name">First Name</label>
-              <input type="text" id="first-name" name="firstName" required
-                  class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-  
-          <!-- Last Name -->
-          <div>
-              <label class="block text-sm font-medium mb-1" for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="lastName" required
-                  class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
-
-          <!-- Email -->
-          <div>
-            <label class="block text-sm font-medium mb-1" for="email">Email</label>
-            <input type="email" id="email" name="email" required
-                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-        </div>
-  
-          <!-- Allergies -->
-          <div>
-              <label class="block text-sm font-medium mb-1" for="allergies">Allergies</label>
-              <input type="text" id="allergies" name="allergies" placeholder="Optional"
-                  class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-          </div>
+  <section id="hero-jumbotron" class="relative h-screen lg:mt-10 pb-10 flex flex-col-reverse lg:flex-row items-center justify-center text-white text-center w-full overflow-hidden xl:gap-20">
+    <div class="lg:mt-32 lg:h-[60vh] lg:w-[30vw] lg:block hidden">
+      <div class="h-50 lg:h-[50vh] lg:w-[40vw] xl:h-[60vh] xl:w-[35vw] w-[50vw] bg-[url(../imgs/accents/vecteezy_green-watercolor-botanical-leaves-and-branches-frame_29847038.png)] z-0 bg-cover bg-center fade-in-up">
+        <div class="pt-10 pr-20 xl:pr-50 flex justify-center">
+          <h1 class="text-7xl text-black fade-in-up alex-brush-regular mt-16 xl:mt-16 xl:w-32 xl:ml-10">Lauren & Matt</h1>
           
-          <!-- Food Choice -->
-        <fieldset class="mt-2">
-          <legend class="text-sm font-medium text-black">Food Choice:</legend>
-          <div class="flex space-x-4 mt-1">
-              <label class="flex items-center space-x-1">
-                  <input type="radio" name="foodChoice" value="Pizza" required class="text-black focus:ring-black">
-                  <span class="text-sm text-black">Pizza</span>
-              </label>
-              <label class="flex items-center space-x-1">
-                  <input type="radio" name="foodChoice" value="Stroganoff" required class="text-black focus:ring-black">
-                  <span class="text-sm text-black">Stroganoff</span>
-              </label>
-          </div>
-      </fieldset>
-
-      <!-- Plus One -->
-      <div class="flex items-center space-x-2">
-          <input type="checkbox" id="plus-one" name="plusOne"
-              class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded">
-          <label for="plus-one" class="text-sm text-black">Bringing Guests?</label>
-
+        </div>
       </div>
+    </div>
+
+    <div class="h-[100%] lg:h-[80vh] xl:h-[85vh] w-[100%]  lg:w-[50vw] xl:w-[30vw] bg-[url(../imgs/RingBanner2.jpg)] bg-cover lg:rotate-6 bg-center lg:flex-none flex justify-center items-center lg:justify-center lg:items-center fade-in-up lg:rounded-4xl lg:mt-10 lg:ml-30 xl:ml-0 z-0 ">
+      <div class=" mt-96 md:mt-120 lg:mt-120">
+        <h1 class="text-5xl text-white fade-in-up alex-brush-regular lg:hidden">Lauren & Matt</h1>
+        
+        <!-- Countdown Content -->
+        <div class="relative z-20 flex flex-col items-center justify-center h-full lg:hidden">
+          <h2 class="text-3xl md:text-5xl text-white poiret-one-regular drop-shadow-lg mb-4 ">October 11th, 2025</h2>
+          <div id="countdown-2" class="flex space-x-6 text-2xl md:text-4xl text-white poiret-one-regular drop-shadow-lg"></div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </section>
+
+  <!-- Parallax Div -->
+  <div class="relative h-[50vh] w-full overflow-hidden hidden lg:block">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+    <!-- Parallax Image -->
+    <div class="absolute inset-0 bg-[url(../imgs/IMG_2588.jpg)] bg-center bg-no-repeat bg-cover parallax"></div>
+    <!-- Countdown Content -->
+    <div class="relative z-20 flex flex-col items-center justify-center h-full">
+      <h2 class="text-5xl text-white font-bold drop-shadow-lg mb-4 poiret-one-regular">October 11th, 2025</h2>
+        <div id="countdown" class="flex space-x-6 text-2xl md:text-4xl text-white poiret-one-regular drop-shadow-lg"></div>
+    </div>
+
+  </div>
+  
+  <div class="flex gap-24 justify-center items-center bg-opacity-50 mt-10 xl:p-10">
+    
+    <div class=" flex flex-col gap-3 text-center poiret-one-regular">
+      <h2 class="text-5xl/relaxed alex-brush-regular">The Ceremony</h2>
+      <p class="text-2xl/relaxed">October 11th, 2025</p>
+      <p class="text-2xl/relaxed">3:00 PM</p>
+      <p class="text-2xl/relaxed">259 Concord Street, Framingham MA</p>
+    </div>
 
       
+  </div>
 
-      <!-- Plus One Name Input (hidden by default) -->
-    <div id="plus-one-name-field" class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
-      <label class="block text-sm font-medium mb-1 mt-2" for="plus-one-name">Guest/s</label>
-      <textarea
-          type="text" 
-          id="plus-one-name" 
-          name="plusOneName" 
-          placeholder="Ex: John Doe, Jane Doe"
-          class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-    </div>
+  <!-- Proposal Photos -->
+    <div class="max-w-6xl mx-auto px-4 mt-20">
 
-         <!-- Error message -->
-      <div id="error-message" class="hidden text-center p-4 bg-red-100 rounded-md mb-4 text-red-700">
-        Sorry, something went wrong. Please try again.
+      <h2 class="text-5xl font-bold text-center text-gray-800 mb-6 alex-brush-regular">The Proposal</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="overflow-hidden rounded-lg shadow-lg ">
+          <img src="../imgs/Proposal/IMG_3113.jpg" alt="Wedding Photo 1" class="w-full h-[100%] object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img src="../imgs/Proposal/IMG_3117.JPG" alt="Wedding Photo 2" class="w-full h-auto object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <img src="../imgs/Proposal/IMG_3126.JPG" alt="Wedding Photo 3" class="w-full h-[100%] object-cover transition-transform duration-300 hover:scale-105">
+        </div>
+        
       </div>
-  
-          <!-- Submit Button -->
-          <button type="submit" id="submit-button"
-              class="w-full bg-black hover:bg-gray-600 text-white font-semibold py-2 rounded-md transition duration-300">Submit RSVP
-          </button>
-      </form>
-  </section>
-
-    <div class="w-full h-[400px] rounded-lg overflow-hidden shadow-lg mt-15">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5903.659446080046!2d-71.41707082348198!3d42.282158040019176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e38846fb96e28d%3A0xa7683ed22ae5c949!2s259%20Concord%20St%2C%20Framingham%2C%20MA%2001702!5e0!3m2!1sen!2sus!4v1743031714279!5m2!1sen!2sus" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
     </div>
 
+      <!-- Parallax Div -->
+    <div class="relative h-[50vh] top-12 w-full overflow-hidden">
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+        <!-- Parallax Image -->
+      <div class="absolute inset-0 bg-[url(../imgs/Engagement/IMG_2628-min.jpg)] bg-[left_10rem] lg:bg-[center_8rem] xl:bg-[center_0rem] bg-no-repeat bg-cover parallax"></div>
+      
+      <div class="relative z-20 flex flex-col items-center justify-center h-full">
+        <h2 class="text-5xl text-white font-bold drop-shadow-lg mb-4 poiret-one-regular">Join Us</h2>
+        <a href="/html/rsvpForm.html">
+          <button class="px-10 py-3 border-2 border-white text-white hover:cursor-pointer hover:bg-white hover:text-black duration-150 ease-in ">RSVP</button>
+        </a>
+        
+      </div>
+    </div>
+
+  
+
+    
+
 
   </section>
   
-
-  
-
   <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   <script src="../js/Navbar.js"></script>
-  <script src="../js/rsvpForm.js"></script>
-  <script src="../js/countdown.js"></script>
+  <script src="../js/Countdown.js"></script>
+  <script src="../js/Countdown2.js"></script>
+
 
 </body>
 </html>

@@ -12,6 +12,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -51,37 +58,46 @@
     </div>
   </nav>
 
+  <!-- Parallax Div -->
+  <div class="relative h-[30vh] w-full overflow-hidden">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+    <!-- Parallax Image -->
+    <div class="absolute inset-0 bg-[url(../imgs/IMG_2588.jpg)] bg-[center_-12rem] xl:bg-[center_-18rem] bg-no-repeat bg-cover parallax"></div>
+    <!-- Countdown Content -->
+    <div class="relative z-20 flex flex-col items-center justify-center h-full">
+      <h2 class="text-5xl text-white font-bold drop-shadow-lg mb-4 alex-brush-regular">FAQ</h2>
+        <div id="countdown" class="flex space-x-6 text-2xl md:text-4xl text-white poiret-one-regular drop-shadow-lg"></div>
+    </div>
 
+  </div>
   <!-- Question  List -->
-  <section class="flex justify-center items-center px-4 mx-auto max-w-screen text-center mb-12 mt-24 lg:py-12 montserrat-regular">
+  <section class="flex justify-center items-center px-4 mx-auto max-w-screen text-center mb-12 mt-15 lg:py-12 montserrat-regular">
     <div class="space-y-12">
+
       <div>
-        <h1 class="text-4xl font-medium mb-5">FAQ</h2>
+        <h2 class="text-3xl mb-5 poiret-one-bold">Is there a dress code?</h2>
+        <p class="text-2xl poiret-one-regular">Please wear formal attire and refrain from wearing white.</p>
       </div>
 
       <div>
-        <h2 class="text-2xl font-medium mb-5">Is there a dress code?</h2>
-        <p>Please wear formal attire and refrain from wearing white.</p>
+        <h2 class="text-3xl mb-5 poiret-one-bold">Where can we park? </h2>
+        <p class="text-2xl poiret-one-regular">There is a parking lot directly outside the church at 259 Concord St, Framingham, MA 01702 with overflow parking in the back</p>
       </div>
 
       <div>
-        <h2 class="text-2xl font-medium mb-5">Where can we park? </h2>
-        <p>There is a parking lot directly outside the church at 259 Concord St, Framingham, MA 01702 with overflow parking in the back</p>
+        <h2 class="text-3xl mb-5 poiret-one-bold">Can we bring the kids?</h2>
+        <p class="text-2xl poiret-one-regular">Yes! All children welcome</p>
       </div>
 
       <div>
-        <h2 class="text-2xl font-medium mb-5">Can we bring the kids?</h2>
-        <p>Yes! All children welcome</p>
+        <h2 class="text-3xl mb-5 poiret-one-bold">Can I bring a date?</h2>
+        <p class="text-2xl poiret-one-regular">Yes! You can list someone as your plus one if they do not already have their own invitation</p>
       </div>
 
       <div>
-        <h2 class="text-2xl font-medium mb-5">Can I bring a date?</h2>
-        <p>Yes! You can list someone as your plus one if they do not already have their own invitation</p>
-      </div>
-
-      <div>
-        <h2 class="text-2xl font-medium mb-5">Is there assigned seating?</h2>
-        <p>No! Please sit wherever you want</p>
+        <h2 class="text-3xl mb-5 poiret-one-bold">Is there assigned seating?</h2>
+        <p class="text-2xl poiret-one-regular">No! Please sit wherever you want</p>
       </div>
 
       <!-- <div>

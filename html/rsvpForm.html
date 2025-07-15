@@ -16,6 +16,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Poiret+One&display=swap" rel="stylesheet">
+
 
 
 </head>
@@ -51,65 +55,76 @@
         <a href="./index.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Home</a>
         <a href="./rsvpForm.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">RSVP</a>
         <a href="./faq.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">FAQ</a>
-        <a href="./Registry.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Registry</a>
+        <a href="./registry.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Registry</a>
         <a href="./gallery.html" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Gallery</a>
 
       </div>
   </nav>
 
-  <div class="relative top-20 h-[20vh] flex items-center justify-center bg-fixed bg-cover bg-[url('../imgs/Engagement/IMG_2749-min.jpg')] bg-[center_bottom_122rem]">
-    <h1 class="text-white text-5xl">RSVP</h1>
+  <!-- Parallax Div -->
+  <div class="relative h-[30vh] w-full overflow-hidden">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+    <!-- Parallax Image -->
+    <div class="absolute inset-0 bg-[url(../imgs/IMG_2588.jpg)] bg-[center_-12rem] xl:bg-[center_-18rem] bg-no-repeat bg-cover parallax"></div>
+    <!-- Countdown Content -->
+    <div class="relative z-20 flex flex-col items-center justify-center h-full">
+      <h2 class="text-5xl text-white font-bold drop-shadow-lg mb-4 alex-brush-regular">RSVP</h2>
+        <div id="countdown" class="flex space-x-6 text-2xl md:text-4xl text-white poiret-one-regular drop-shadow-lg"></div>
+    </div>
+
   </div>
 
   
-  <section class="w-[80%] md:w-[50%] lg:w-[50%] mx-auto p-6 mt-52">
-    <h2 class="text-2xl font-semibold mb-4 text-center text-black">Let Us Know You'll Be There!</h2>
+  <section class="w-[100%] md:w-[50%] lg:w-[50%] mx-auto p-6 xl:mt-20 mt-25">
+    <h2 class="text-3xl xl:text-4xl font-semibold mb-4 text-center text-black poiret-one-regular">Let Us Know You'll Be There!</h2>
 
     <div id="success-message" class="hidden text-center p-4 bg-green-100 rounded-md mb-4 text-green-700">
       🎉 Thank you for your RSVP! We can't wait to celebrate with you.
     </div>
 
 
-    <form id="rsvp-form" class="space-y-4 text-left text-black">
+    <form id="rsvp-form" class="space-y-4 text-left text-black bg-white p-6 rounded-2xl shadow-lg">
         <!-- First Name -->
         <div>
-            <label class="block text-sm font-medium mb-1" for="first-name">First Name</label>
+            <label class="block text-2xl font-medium mb-1 poiret-one-regular" for="first-name">First Name</label>
             <input type="text" id="first-name" name="firstName" required autocomplete="first-name"
                 class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
         <!-- Last Name -->
         <div>
-            <label class="block text-sm font-medium mb-1" for="last-name">Last Name</label>
+            <label class="block text-2xl font-medium mb-1 poiret-one-regular" for="last-name">Last Name</label>
             <input type="text" id="last-name" name="lastName" required
                 class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
         <!-- Email -->
         <div>
-          <label class="block text-sm font-medium mb-1" for="email">Email</label>
+          <label class="block text-2xl font-medium mb-1 poiret-one-regular" for="email">Email</label>
           <input type="email" id="email" name="email" required autocomplete="email"
               class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
         <!-- Allergies -->
         <div>
-            <label class="block text-sm font-medium mb-1" for="allergies">Allergies</label>
+            <label class="block text-2xl font-medium mb-1 poiret-one-regular" for="allergies">Allergies</label>
             <input type="text" id="allergies" name="allergies" placeholder="Optional"
-                class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                class="w-full poiret-one-regular p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
         <!-- Food Choice -->
         <fieldset class="mt-2">
-            <legend class="text-sm font-medium text-black">Food Choice:</legend>
+            <legend class="text-xl font-medium text-black poiret-one-regular">Food Choice:</legend>
             <div class="flex space-x-4 mt-1">
                 <label class="flex items-center space-x-1">
                     <input type="radio" name="foodChoice" value="Pizza" required class="text-black focus:ring-black">
-                    <span class="text-sm text-black">Pizza</span>
+                    <span class="poiret-one-regular text-xl text-black">Pizza</span>
                 </label>
+                
                 <label class="flex items-center space-x-1">
                     <input type="radio" name="foodChoice" value="Stroganoff" required class="text-black focus:ring-black">
-                    <span class="text-sm text-black">Stroganoff</span>
+                    <span class="poiret-one-regular text-xl text-black">Stroganoff</span>
                 </label>
             </div>
         </fieldset>
@@ -118,7 +133,7 @@
         <div class="flex items-center space-x-2">
             <input type="checkbox" id="plus-one" name="plusOne"
                 class="h-4 w-4 text-black focus:ring-black border-gray-300 rounded">
-            <label for="plus-one" class="text-sm text-black">Bringing Guests?</label>
+            <label for="plus-one" class="poiret-one-regular text-xl text-black">Bringing Guests?</label>
 
         </div>
 
@@ -126,13 +141,13 @@
 
         <!-- Plus One Name Input (hidden by default) -->
       <div id="plus-one-name-field" class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
-        <label class="block text-sm font-medium mb-1 mt-2" for="plus-one-name">Guest/s</label>
+        <label class="block poiret-one-regular text-2xl font-medium mb-1 mt-2" for="plus-one-name">Guest/s</label>
         <textarea
             type="text" 
             id="plus-one-name" 
             name="plusOneName" 
             placeholder="Ex: John Doe, Jane Doe"
-            class="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            class="w-full poiret-one-regular p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Error message -->
