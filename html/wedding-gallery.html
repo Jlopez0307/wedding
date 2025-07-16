@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Wedding</title>
+  <link rel="stylesheet" href="../css/output.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Poiret+One&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+     
+  <!-- 🌐 Navbar -->
+  <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-end items-center py-4">
+        
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+          <a href="./index.html" class="hover:text-blue-500">Home</a>
+          <a href="./rsvpForm.html" class="hover:text-blue-500">RSVP</a>
+          <a href="./faq.html" class="hover:text-blue-500">FAQ</a>
+          <a href="./registry.html" class="hover:text-blue-500">Registry</a>
+          <a href="./gallery.html" class="hover:text-blue-500">Gallery</a>
+          <a href="./wedding-gallery.html" class="hover:text-blue-500">Wedding Gallery</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden flex flex-col space-y-1  focus:outline-none">
+          <div class="w-6 h-0.5 bg-gray-800 transition-all duration-300" id="bar1"></div>
+          <div class="w-6 h-0.5 bg-gray-800 transition-all duration-300" id="bar2"></div>
+          <div class="w-6 h-0.5 bg-gray-800 transition-all duration-300" id="bar3"></div>
+        </button>
+
+      </div>
+    </div>
+
+   <div class="min-h-screen bg-gray-100 p-6">
+  <h2 class="text-2xl font-semibold text-center mb-4">Wedding Gallery</h2>
+
+  <div id="gallery" class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
+    <!-- Images will appear here -->
+  </div>
+</div>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-storage-compat.js"></script>
+
+<!-- Gallery JS -->
+<script src="../js/weddingGallery.js"></script>
+  <script src="../js/Navbar.js"></script>
+</body>
+</html>
