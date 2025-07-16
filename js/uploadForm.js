@@ -1,16 +1,11 @@
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCHyaQizf2R-14owLvcq6O450ArCPCSJcQ",
-  authDomain: "ml-wedding-2bf4e.firebaseapp.com",
-  projectId: "ml-wedding-2bf4e",
-  storageBucket: "ml-wedding-2bf4e.firebasestorage.app",
-  messagingSenderId: "283590127904",
-  appId: "1:283590127904:web:a3250e1e7123986f3ba745"
-};
+fetch('/firebase-config')
+  .then(res => res.json())
+  .then(config => {
+    firebase.initializeApp(config);
 
-firebase.initializeApp(firebaseConfig);
-const storage = firebase.storage();
+    // Now you can run your upload/gallery logic here
+    const storage = firebase.storage();
 
 const form = document.getElementById('uploadForm');
 const status = document.getElementById('status');
@@ -33,3 +28,5 @@ form.addEventListener('submit', async e => {
     status.textContent = 'Upload failed. Please try again.';
   }
 });
+  })
+  .catch(err => console.error('Error fetching Firebase config:', err));
