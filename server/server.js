@@ -22,6 +22,10 @@ app.get('/firebase-config', (req, res) => {
 //   res.sendFile(path.join(__dirname, '../html/index.html'));
 // });
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../html/index.html'));
+});
+
 app.get('/home', (req, res) => {
   res.sendFile(path.join(__dirname, '../html/index.html'));
 });
@@ -47,7 +51,7 @@ app.get('/upload', (req, res) => {
 });
 
 app.get('/wedding-gallery', (req, res) => {
-  res.sendFile(path.join(__dirname, '../html/weddin-gallery.html'));
+  res.sendFile(path.join(__dirname, '../html/wedding-gallery.html'));
 });
 
 const PORT = process.env.PORT || 3000;
