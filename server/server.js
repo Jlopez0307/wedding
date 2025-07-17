@@ -18,8 +18,36 @@ app.get('/firebase-config', (req, res) => {
 });
 
 // Optional: Catch-all for single-page apps
-app.get('*', (req, res) => {
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../html/index.html'));
+// });
+
+app.get('/home', (req, res) => {
   res.sendFile(path.join(__dirname, '../html/index.html'));
+});
+
+app.get('/rsvp', (req, res) => {
+  res.sendFile(path.join(__dirname, '../html/rsvpForm.html'));
+});
+
+app.get('/faq', (req, res) => {
+  res.sendFile(path.join(__dirname, '../html/faq.html'));
+});
+
+app.get('/registry', (req, res) => {
+  res.sendFile(path.join(__dirname, '../html/registry.html'));
+});
+
+app.get('/gallery', (req, res) => {
+  res.sendFile(path.join(__dirname, '../html/gallery.html'));
+});
+
+app.get('/upload', (req, res) => {
+  res.sendFile(path.join(__dirname, '../html/upload.html'));
+});
+
+app.get('/wedding-gallery', (req, res) => {
+  res.sendFile(path.join(__dirname, '../html/weddin-gallery.html'));
 });
 
 const PORT = process.env.PORT || 3000;
