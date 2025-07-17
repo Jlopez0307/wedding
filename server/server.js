@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 
 // Serve static files (your HTML/CSS/JS)
-app.use(express.static(path.join(__dirname, '../html')));
+app.use(express.static(path.join(__dirname, '../')));
 
 // Serve Firebase config from env vars
 app.get('/firebase-config', (req, res) => {
