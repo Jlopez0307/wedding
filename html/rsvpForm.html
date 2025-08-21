@@ -39,8 +39,8 @@
           <a href="/faq" class="hover:text-blue-500">FAQ</a>
           <a href="/registry" class="hover:text-blue-500">Registry</a>
           <a href="/gallery" class="hover:text-blue-500">Gallery</a>
-          <a href="/wedding-gallery" class="hover:text-blue-500">Wedding Gallery</a>
-          <a href="/upload" class="hover:text-blue-500">Photo Upload</a>
+          <!-- <a href="/wedding-gallery" class="hover:text-blue-500">Wedding Gallery</a>
+          <a href="/upload" class="hover:text-blue-500">Photo Upload</a> -->
         </div>
 
         <!-- Mobile Menu Button -->
@@ -58,8 +58,8 @@
       <a href="/faq" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">FAQ</a>
       <a href="/registry" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Registry</a>
       <a href="/gallery" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Gallery</a>
-      <a href="/wedding-gallery" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Wedding Gallery</a>
-      <a href="/upload" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Photo Upload</a>
+      <!-- <a href="/wedding-gallery" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Wedding Gallery</a>
+      <a href="/upload" class="block py-2 opacity-0 translate-y-5 transition-all duration-300">Photo Upload</a> -->
 
     </div>
   </nav>
@@ -117,18 +117,25 @@
 
         <!-- Food Choice -->
         <fieldset class="mt-2">
-            <legend class="text-xl font-medium text-black poiret-one-regular">Food Choice:</legend>
-            <div class="flex space-x-4 mt-1">
-                <label class="flex items-center space-x-1">
-                    <input type="radio" name="foodChoice" value="Pizza" required class="text-black focus:ring-black">
-                    <span class="poiret-one-regular text-xl text-black">Pizza</span>
-                </label>
-                
-                <label class="flex items-center space-x-1">
-                    <input type="radio" name="foodChoice" value="Stroganoff" required class="text-black focus:ring-black">
-                    <span class="poiret-one-regular text-xl text-black">Stroganoff</span>
-                </label>
-            </div>
+          <legend class="text-xl font-medium text-black poiret-one-regular mb-2">Food Choice:</legend>
+          <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 mt-1 justify-center items-center">
+            <!-- Pizza Option -->
+            <label class="flex flex-col items-center cursor-pointer group">
+              <img src="../imgs/menu/pizza.png" alt="Pizza" class="w-24 h-24 object-cover rounded-xl shadow-md mb-2 group-hover:scale-105 transition-transform duration-300" />
+              <div class="flex items-center space-x-2">
+                <input type="radio" name="foodChoice" value="Pizza" required class="text-black focus:ring-black">
+                <span class="poiret-one-regular text-xl text-black">Pizza</span>
+              </div>
+            </label>
+            <!-- Stroganoff Option -->
+            <label class="flex flex-col items-center cursor-pointer group">
+              <img src="/imgs/menu/stroganoff.png" alt="Stroganoff" class="w-24 h-24 object-cover rounded-xl shadow-md mb-2 group-hover:scale-105 transition-transform duration-300" />
+              <div class="flex items-center space-x-2">
+                <input type="radio" name="foodChoice" value="Stroganoff" required class="text-black focus:ring-black">
+                <span class="poiret-one-regular text-xl text-black">Stroganoff</span>
+              </div>
+            </label>
+          </div>
         </fieldset>
 
         <!-- Plus One -->
