@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/cli": "^4.0.13",
+    "dotenv": "^17.2.1",
     "express": "^4.21.2",
     "firebase": "^11.10.0",
     "googleapis": "^150.0.1",

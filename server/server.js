@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+// Load environment variables from .env file in project root
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
+
 // Serve static files (your HTML/CSS/JS)
 app.use(express.static(path.join(__dirname, '../')));
 
@@ -9,11 +12,11 @@ app.use(express.static(path.join(__dirname, '../')));
 app.get('/firebase-config', (req, res) => {
   res.json({
     apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: "ml-wedding-2bf4e.firebaseapp.com",
-    projectId: "ml-wedding-2bf4e",
-    storageBucket: "ml-wedding-2bf4e.firebasestorage.app",
-    messagingSenderId: "283590127904",
-    appId: "1:283590127904:web:a3250e1e7123986f3ba745"
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID
   });
 });
 
