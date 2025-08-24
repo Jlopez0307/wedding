@@ -1,4 +1,5 @@
 node_modules/
 still-mapper-463300-p8-b65b583b0444.json
-firebase-keys.json
+firebase-key.json
 .env
+cors.json
