@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Set the wedding date (October 11, 2025, 15:00 local time)
-  const weddingDate = new Date('2025-10-11T15:00:00');
+  const weddingDate = new Date('2025-10-11T12:00:00');
 
   function updateCountdown() {
     const now = new Date();
